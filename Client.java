@@ -24,7 +24,7 @@ public class Client {
 
     public void startReading() {
         // make a thread to continuiusly read data
-        Runnable r1 = ()-> {
+        Rugit nnable r1 = ()-> {
             System.out.println("reader started...");
             try {
                 while (!socket.isClosed()) {
