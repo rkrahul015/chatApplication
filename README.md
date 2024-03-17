@@ -1,71 +1,59 @@
-# Chat-Application Using JAVA
-Requirements:
-    JAVA Basics(OOPs)
-    Reading and Writing
-    Networking(Socket Programming)
-    for GUI - Java Swing
-    Multi-threading
+ # Java Socket Chat Application
 
-Info :
-    ServerSocket for Server and Socket for Client
-    use IP address to connect to server to client and vice versa
+This is a foundational Java socket chat application that enables communication between a server and multiple clients for basic text-based chat functionalities.
 
+## Overview
 
-### Working Explanation:
+The application implements a simple chat system using Java and sockets, allowing threaded communication between a server and clients. The server utilizes a `ServerSocket` and listens on port 7777, while the client attempts to connect to the server at "localhost" on the same port. Upon successful connection, input and output streams are established for communication, and two threads are initiated for reading from and writing to the server, enabling simultaneous communication.
 
-1. **Server Side:**
-   - The server creates a `ServerSocket` and listens on port 7777.
-   - When a client connects, the server accepts the connection and establishes input and output streams for communication.
-   - Two threads are started for reading and writing, allowing simultaneous communication with the client.
-   - The server continuously reads messages from the client and prints them. If the client sends "exit," the server terminates the chat.
-   - The server also continuously takes input from the user and sends it to the client. If the server types "exit," it closes the socket and terminates the chat.
+## Features
 
-2. **Client Side:**
-   - The client attempts to connect to the server at "localhost" on port 7777.
-   - After successfully connecting, input and output streams are established for communication.
-   - Two threads are started for reading and writing, allowing simultaneous communication with the server.
-   - The client continuously reads messages from the server and prints them. If the server sends "exit," the client terminates the chat.
-   - The client also continuously takes input from the user and sends it to the server. If the client types "exit," it closes the socket and terminates the chat.
+- **Server Side:**
+   - Initialization and connection handling.
+   - Thread management for concurrent communication.
+   - Message handling with termination control.
 
+- **Client Side:**
+   - Connection establishment and setup for input/output streams.
+   - Thread management for concurrent communication.
+   - Message handling with termination control.
 
-# Simple Java Socket Chat Application
+## Usage
 
-This is a simple console-based chat application implemented in Java using sockets. It consists of a server and a client allowing basic text communication.
+1. **Server Setup:**
+   - Compile the `Server.java` file:
+     ```bash
+     javac Server.java
+     ```
+   - Run the server:
+     ```bash
+     java Server
+     ```
 
-## Technologies Used:
+2. **Client Setup:**
+   - Compile the `Client.java` file:
+     ```bash
+     javac Client.java
+     ```
+   - Run the client:
+     ```bash
+     java Client
+     ```
+
+3. **Communication:**
+   - Follow the instructions in the console to send and receive messages. Type "exit" to terminate the chat.
+
+## Technologies Used
 
 - Java
 - Sockets
 
-## Usage:
+## Additional Notes
 
-1. Compile the Server.java file:
-   ```bash
-   javac Server.java
-   ```
+- This application serves as a foundational understanding of Java socket programming and chat systems.
 
-2. Compile the Client.java file:
-   ```bash
-   javac Client.java
-   ```
-
-3. Run the Server:
-   ```bash
-   java Server
-   ```
-
-4. Run the Client (in a separate terminal or command prompt):
-   ```bash
-   java Client
-   ```
-
-5. Follow the instructions in the console to send and receive messages.
-
-## Additional Notes:
-
-- Type "exit" to terminate the chat.
-
-## Author:
+## Author
 
 Rahul Kumar
 
+Feel free to contribute and enhance this basic chat application for learning and development purposes.  
